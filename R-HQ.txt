@@ -1,0 +1,20 @@
+Current configuration : 1983 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R-HQ
+!
+!
+!
+!
+ip dhcp excluded-address 192.168.20.1 192.168.20.20
+ip dhcp excluded-address 192.168.40.1 192.168.40.20
+!
+ip dhcp pool HQ-EMPLOYEES
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ dns-server 8.8.8.8
+ip dhcp pool HQ-VOICE
